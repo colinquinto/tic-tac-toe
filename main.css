@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+
+@font-face {
+    font-family: one-font;
+    src: url(font/Motley.ttf);
+}
+
+@font-face {
+    font-family: two-font;
+    src: url(font/Cheese.ttf);
+}
+
+:root {
+    font-family: two-font;
+    --color-one: #0d9488;
+    --lighter-color-one: #14b8a6;
+    --brown: #44403c; 
+}
