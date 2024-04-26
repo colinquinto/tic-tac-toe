@@ -24,3 +24,60 @@ html, body {
     --lighter-color-one: #14b8a6;
     --brown: #44403c; 
 }
+
+.container {
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    grid-template: 100px 50px 20px 50px 20px 50px 1fr / 1fr;
+    background-color: #f0fdfa;
+    overflow: auto;
+}
+
+.container > h1 {
+    align-self: center;
+    font-size: clamp(40px, 10vw ,4rem);
+    font-family: two-font;
+    color: var(--color-one);
+}
+
+.players {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.players > p {
+    padding: 0 10px;
+    align-self: center;
+    font-size: 1.3rem;
+    color: var(--brown);
+}
+
+.next-turn {
+    align-self: center;
+    font-size: 1.3rem;
+    color: var(--brown);
+}
+
+.turn-player {
+    align-self: center;
+    font-size: 2rem;
+    color: var(--brown);
+    text-decoration: underline;
+}
+
+.reset-game {
+    background: none;
+    border: none;
+    color: var(--color-one);
+    font-family: two-font;
+    font-size: 1.5rem;
+}
+
+.reset-game:hover {
+    color: var(--lighter-color-one);
+    cursor: pointer;
+}
