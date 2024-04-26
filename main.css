@@ -109,3 +109,67 @@ html, body {
     border: 1px solid var(--color-one);
     color: #000;
 }
+
+dialog {
+    height: 250px;
+    width: clamp(300px, 50vw, 200px);
+    justify-self: center;
+    align-self: center; 
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 5px -2px #000;
+    background-color: var(--lighter-color-one);
+}
+
+dialog > div {
+    width: 100%;
+    padding: 20px;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(4, 40px) 1fr / 1fr;
+    justify-content: center;
+}
+
+dialog > div > * {
+    width: 100%;
+}
+
+dialog > div > input {
+    grid-column: span 2;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.7rem;
+    height: 30px;
+    padding: 10px;
+    outline: none;
+    margin-top: 5px;
+}
+
+dialog > div > label {
+    font-size: 1.3rem;
+    align-self: flex-end;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+dialog > div > button{
+    display: grid;
+    align-items: center;
+    height: 35px;
+    width: 70px;
+    align-self: flex-end;
+    justify-self: center;
+    font-size: 1.3rem;
+    border-radius: 20px;
+    border: none;
+    font-family: one-font;
+    background-color: #fff;
+    color: var(--color-one);
+}
+
+dialog > div > button:hover{
+    background-color: var(--color-one);
+    color: #fff;
+    cursor: pointer;
+}
