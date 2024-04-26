@@ -10,12 +10,12 @@ html, body {
 
 @font-face {
     font-family: one-font;
-    src: url(font/Motley.ttf);
+    src: url(fonts/Motlmey.ttf);
 }
 
 @font-face {
     font-family: two-font;
-    src: url(font/Cheese.ttf);
+    src: url(fonts/Cheese.ttf);
 }
 
 :root {
