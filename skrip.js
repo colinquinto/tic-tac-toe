@@ -30,10 +30,17 @@ const boardGame = (() => {
         })
         document.querySelector(".board").innerHTML = setBoard;
         const getSquares = document.querySelectorAll(".square");
+        
         // Click event for each squares
         getSquares.forEach((square) => {
             square.addEventListener("click", gameController.clickFunc)
-        })  
+        })
+        getSquares.forEach((square) => {
+            square.addEventListener("animationend", () => {
+                square.classList.remove("anim")
+            })
+
+        })
     }
 
     // Update the board array and render it again
@@ -135,7 +142,7 @@ const gameController = (() => {
         boardGame.renderBoard();
         gameEnd = false;
         const turn = document.querySelector(".next-turn");
-        turn.textContent = players[0].name + "'s turn";
+        turn.textContent = players[activePlayer].name + "'s turn";
     }
 
     return {
@@ -184,5 +191,11 @@ restartGame.addEventListener("click", () => {
 const startGame = document.querySelector(".start-game");
 startGame.addEventListener("click", () => {
     gameController.start();
+    const showBoard = document.querySelector(".board")
+    showBoard.style.visibility = "visible";
+    const getSquares = document.querySelectorAll(".square");
+    getSquares.forEach((square) => {
+        square.classList.add("anim")
+    })
     showModal.close();
 })
