@@ -83,11 +83,14 @@ html, body {
 }
 
 .board {
-    height: clamp(150px, 50vh, 600px);
-    width: clamp(200px, 100%, 400px);
+    height: clamp(270px, 50vh, 600px);
+    width: clamp(250px, 100%, 400px);
     display: grid;
     grid-template: repeat(3, minmax(50px, 1fr)) / repeat(3, minmax(50px, 1fr));
-    padding: 20px;
+    padding: 5px;
+    background-color: var(--brown);
+    border-radius: 5px;
+   
 }
 
 .square {
@@ -97,17 +100,30 @@ html, body {
     font-size: clamp(60px, 10vw, 4rem);
     align-content: center;
     border: none;
-    margin: 1px;
     color: #f5f5f4;
     text-shadow: 0px 5px var(--brown);
-    border-radius: 5px;
     font-family: one-font;
+    margin: 5px;
+}
+
+.anim {
+    animation: squareAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes squareAnim {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 .square:hover {
     background-color: #99f6e4;
     border: 1px solid var(--color-one);
-    color: #000;
+    color: var(--brown);
 }
 
 dialog {
