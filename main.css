@@ -27,6 +27,7 @@ html, body {
 
 .container {
     height: 100%;
+    width: 100%;
     display: grid;
     justify-items: center;
     grid-template: 100px 50px 20px 50px 20px 50px 1fr / 1fr;
